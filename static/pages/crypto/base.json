@@ -1,0 +1,245 @@
+{
+  "type": "page",
+  "title": "Base系列编码",
+  "body": [
+    {
+      "type": "textarea",
+      "label": "输入",
+      "name": "data_input",
+      "id": "u:283de4ca407e",
+      "minRows": 10,
+      "maxRows": 10,
+      "trimContents": false,
+      "size": "full",
+      "placeholder": "请输入数据",
+      "value": ""
+    },
+    {
+      "type": "flex",
+      "className": "p-1",
+      "items": [
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "select",
+              "label": "算法",
+              "name": "algo",
+              "options": [
+                {
+                  "label": "Base64",
+                  "value": "Base64"
+                },
+                {
+                  "label": "Base64(noUrlEncode)",
+                  "value": "Base64(noUrlEncode)"
+                },
+                {
+                  "label": "Base91",
+                  "value": "Base91"
+                },
+                {
+                  "label": "Base58",
+                  "value": "Base58"
+                },
+                {
+                  "label": "Base中文（自制）",
+                  "value": "Base中文"
+                }
+              ],
+              "id": "u:09eda8ceef79",
+              "multiple": false,
+              "size": "md",
+              "value": "Base64",
+              "mode": "inline"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "0 0 auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:5a223f57a923"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "button",
+              "label": "编码",
+              "onEvent": {
+                "click": {
+                  "actions": [
+                    {
+                      "actionType": "custom",
+                      "script": "var func = 'crypto/base/encode'; try { $['func'][func](event, context, doAction); } catch (e) { $['utils']['toast_error']('Action Error: ' + e.message, doAction) }"
+                    }
+                  ]
+                }
+              },
+              "id": "u:4ffaeada9d40",
+              "level": "primary",
+              "size": "lg",
+              "hidden": false,
+              "disabledOn": "${AND(algo==\"Base中文\",LEN(basecn_dict)!=256)}"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "flex",
+            "flex": "0 0 auto",
+            "flexWrap": "nowrap",
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:acd391451783"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "button",
+              "label": "解码",
+              "onEvent": {
+                "click": {
+                  "actions": [
+                    {
+                      "actionType": "custom",
+                      "script": "var func = 'crypto/base/decode'; try { $['func'][func](event, context, doAction); } catch (e) { $['utils']['toast_error']('Action Error: ' + e.message, doAction) }"
+                    }
+                  ]
+                }
+              },
+              "id": "u:cdab5c6002af",
+              "level": "primary",
+              "size": "lg",
+              "disabledOn": "${AND(algo==\"Base中文\",LEN(basecn_dict)!=256)}"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "flex",
+            "flex": "0 0 auto",
+            "flexWrap": "nowrap",
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:94a543827fe9"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "input-text",
+              "label": "Base中文词典",
+              "name": "basecn_dict",
+              "id": "u:7bfdfedc9ebf",
+              "mode": "horizontal",
+              "validateOnChange": true,
+              "validations": {
+                "maxLength": 256,
+                "minLength": 256
+              },
+              "validationErrors": {
+                "maxLength": "Base中文长度错误",
+                "minLength": "Base中文长度错误"
+              },
+              "required": true,
+              "value": "的一是了我不人在他有这个上们来到时大地为子中你说生国年着就那和要她出也得里后自以会家可下而过天去能对小多然于心学么之都好看起发当没成只如事把还用第样道想作种开美总从无情己面最女但现前些所同日手又行意动方期它头经长儿回位分爱老因很给名法间斯知世什两次使身者被高已亲其见明问力理尔点文几定本公特做外孩相西果走将月十实向声车全信重三机工物气每并别真打太新比才便夫再书部水像眼等体却加电主界门利海受听表德少克代员许稜先口由死安写性马光白或住难望教命花结乐色进此话常与活正感更拉东神记处让母父应直字场平报友关放至张认接告入",
+              "hiddenOn": "${algo!=\"Base中文\"}"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:0119bd7063a4"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "button",
+              "label": "默认",
+              "onEvent": {
+                "click": {
+                  "actions": [
+                    {
+                      "componentId": "u:7bfdfedc9ebf",
+                      "groupType": "component",
+                      "actionType": "setValue",
+                      "args": {
+                        "value": "的一是了我不人在他有这个上们来到时大地为子中你说生国年着就那和要她出也得里后自以会家可下而过天去能对小多然于心学么之都好看起发当没成只如事把还用第样道想作种开美总从无情己面最女但现前些所同日手又行意动方期它头经长儿回位分爱老因很给名法间斯知世什两次使身者被高已亲其见明问力理尔点文几定本公特做外孩相西果走将月十实向声车全信重三机工物气每并别真打太新比才便夫再书部水像眼等体却加电主界门利海受听表德少克代员许稜先口由死安写性马光白或住难望教命花结乐色进此话常与活正感更拉东神记处让母父应直字场平报友关放至张认接告入"
+                      }
+                    }
+                  ]
+                }
+              },
+              "id": "u:6746119145f8",
+              "level": "light",
+              "size": "sm",
+              "hiddenOn": "${algo!=\"Base中文\"}"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "0 0 auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:d1aa905a4227"
+        }
+      ],
+      "style": {
+        "position": "relative"
+      },
+      "id": "u:ca5955a7552d"
+    },
+    {
+      "type": "textarea",
+      "label": "输出",
+      "name": "data_output",
+      "id": "data_output",
+      "minRows": 10,
+      "maxRows": 10,
+      "trimContents": false,
+      "size": "full",
+      "placeholder": "数据输出"
+    }
+  ],
+  "onEvent": {
+    "init": {
+      "weight": 0,
+      "actions": [
+        {
+          "ignoreError": false,
+          "script": "var path = 'crypto/base'; $['utils']['load_js']('/static/pages/' + path + '.js')",
+          "actionType": "custom"
+        }
+      ]
+    }
+  },
+  "id": "u:39495dfbae75"
+}

@@ -1,0 +1,52 @@
+{
+    "status": 0,
+    "msg": "",
+    "data": {
+      "pages": [
+        {
+          "label": "Home",
+          "url": "/",
+          "redirect": "/home"
+        },
+        {
+          "label": "",
+          "children": [
+            {
+              "label": "主页",
+              "url": "/home",
+              "schemaApi": "get:/static/pages/home.json"
+            }
+          ]
+        },
+        {
+          "label": "工具",
+          "children": [
+            {
+              "label": "随机数据生成",
+              "url": "/random",
+              "redirect": "/random/int",
+              "children": [
+                {
+                  "label": "随机整数",
+                  "url": "/random/int",
+                  "schemaApi": "get:/static/pages/random/number.json"
+                }
+              ]
+            },
+            {
+              "label": "加解密",
+              "url": "/crypto",
+              "redirect": "/crypto/base",
+              "children": [
+                {
+                  "label": "Base系列编码",
+                  "url": "/crypto/base",
+                  "schemaApi": "get:/static/pages/crypto/base.json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
