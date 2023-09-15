@@ -10,7 +10,7 @@ var $ = (window["lizzhh"] = {});
                 "position": position,
                 "closeButton": closeButton,
                 "showIcon": showIcon,
-                "msg": "Success: " + msg,
+                "msg": msg,
                 "timeout": timeout,
                 "className": "theme-toast-action-scope"
             }

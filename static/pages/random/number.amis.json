@@ -1,0 +1,76 @@
+{
+    "type": "page",
+    "title": "随机整数",
+    "body": [
+      {
+        "type": "input-number",
+        "label": "最小值",
+        "name": "min_number",
+        "keyboard": true,
+        "id": "u:c1d0656929d7",
+        "step": 1,
+        "required": true,
+        "value": 0,
+        "mode": "horizontal",
+        "kilobitSeparator": true
+      },
+      {
+        "type": "input-number",
+        "label": "最大值",
+        "name": "max_number",
+        "keyboard": true,
+        "id": "u:8f7ee2dafec1",
+        "step": 1,
+        "required": true,
+        "mode": "horizontal",
+        "value": 100,
+        "kilobitSeparator": false
+      },
+      {
+        "type": "button",
+        "label": "生成",
+        "onEvent": {
+          "click": {
+            "weight": 0,
+            "actions": [
+              {
+                "ignoreError": false,
+                "script": "!UseFunc(\"random_number\")",
+                "actionType": "custom"
+              }
+            ]
+          }
+        },
+        "id": "u:e5291c526983",
+        "level": "primary",
+        "block": true,
+        "themeCss": {
+          "className": {
+            "padding-and-margin:default": {
+              "marginBottom": "30px"
+            }
+          }
+        },
+        "className": "className-e5291c526983"
+      },
+      {
+        "type": "textarea",
+        "label": "生成值",
+        "name": "number_area",
+        "id": "u:54c8dbfc3db4",
+        "minRows": 3,
+        "maxRows": 50,
+        "readOnly": false,
+        "disabled": false,
+        "static": false,
+        "mode": "horizontal"
+      }
+    ],
+    "id": "u:8cdb7accc431",
+    "asideResizor": false,
+    "pullRefresh": {
+      "disabled": true
+    },
+    "onEvent": {
+    }
+  }

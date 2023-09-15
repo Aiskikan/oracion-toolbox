@@ -1,0 +1,654 @@
+{
+  "type": "page",
+  "title": "hash",
+  "body": [
+    {
+      "type": "flex",
+      "className": "p-1",
+      "items": [
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "textarea",
+              "label": "内容",
+              "name": "textarea",
+              "id": "u:3212cabf0a21",
+              "minRows": 20,
+              "maxRows": 20,
+              "trimContents": false,
+              "value": ""
+            },
+            {
+              "type": "button",
+              "label": "计算",
+              "onEvent": {
+                "click": {
+                  "actions": [
+                    {
+                      "ignoreError": false,
+                      "script": "!UseFunc(\"run_hash\")",
+                      "actionType": "custom"
+                    }
+                  ]
+                }
+              },
+              "id": "u:1239a78bc5db",
+              "size": "lg",
+              "block": true,
+              "level": "primary"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:029fc2b43a4e"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "MD5",
+                      "name": "MD5_checkbox",
+                      "id": "u:ed41acd257c7",
+                      "value": true,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:df886e52edc3",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${MD5_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:48a64ebbdfd3"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "MD5_text",
+                      "id": "u:df886e52edc3"
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "block",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:cbfbd982e6cd"
+                }
+              ],
+              "style": {
+                "position": "relative"
+              },
+              "id": "u:4ff32da1a5bf"
+            },
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "SHA1",
+                      "name": "SHA1_checkbox",
+                      "id": "u:e3b1aae85c10",
+                      "value": true,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:7b24ea9f7b9c",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${SHA1_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:20b42f7dc33f"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "SHA1_text",
+                      "id": "u:7b24ea9f7b9c"
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "block",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:c8fe07cd4a7a"
+                }
+              ],
+              "style": {
+                "position": "relative"
+              },
+              "id": "u:7d4e6b3fff67"
+            },
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "SHA256",
+                      "name": "SHA256_checkbox",
+                      "id": "u:175a709b146f",
+                      "value": true,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:698a740966cf",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${SHA256_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:cbe8c0b63895"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "SHA256_text",
+                      "id": "u:698a740966cf"
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "block",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:5e9f0fa96cde"
+                }
+              ],
+              "style": {
+                "position": "relative"
+              },
+              "id": "u:d4817afcf6cf"
+            },
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "SHA512",
+                      "name": "SHA512_checkbox",
+                      "id": "u:45da1dd86fd8",
+                      "value": true,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:db607ca48f23",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${SHA512_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:e6329074dd1f"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "SHA512_text",
+                      "id": "u:db607ca48f23"
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "block",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:a3145d327a95"
+                }
+              ],
+              "style": {
+                "position": "relative"
+              },
+              "id": "u:7a4b40b91382"
+            },
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "SHA3",
+                      "name": "SHA3_checkbox",
+                      "id": "u:1b337c456936",
+                      "value": true,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:c1341846274d",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${SHA3_checkbox}"
+                              }
+                            },
+                            {
+                              "componentId": "u:156c49286cdb",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${SHA3_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:ba6fb541dcfc"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "select",
+                      "label": "",
+                      "name": "outputLength_select",
+                      "options": [
+                        {
+                          "label": "512",
+                          "value": 512
+                        },
+                        {
+                          "label": "384",
+                          "value": 384
+                        },
+                        {
+                          "label": "256",
+                          "value": 256
+                        },
+                        {
+                          "label": "224",
+                          "value": 224
+                        }
+                      ],
+                      "id": "u:c1341846274d",
+                      "multiple": false,
+                      "value": 512
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:1bed0a759d7b"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "SHA3_text",
+                      "id": "u:156c49286cdb"
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto",
+                    "flexWrap": "nowrap",
+                    "flexDirection": "column-reverse",
+                    "justifyContent": "center",
+                    "overflowX": "auto",
+                    "alignItems": "stretch"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:79ab30904ee7"
+                }
+              ],
+              "style": {
+                "position": "relative"
+              },
+              "id": "u:aeca57368da3"
+            },
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "RIPEMD160",
+                      "name": "RIPEMD160_checkbox",
+                      "id": "u:858edcb36aae",
+                      "value": true,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:9069cd613635",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${RIPEMD160_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:ecdac961b20d"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "RIPEMD160_text",
+                      "id": "u:9069cd613635"
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "block",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:f23c85a3ac77"
+                }
+              ],
+              "style": {
+                "position": "relative"
+              },
+              "id": "u:6c03f1657204"
+            },
+            {
+              "type": "flex",
+              "className": "p-1",
+              "items": [
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "checkbox",
+                      "option": "HMAC加盐",
+                      "name": "HMAC_checkbox",
+                      "id": "u:e5b7d89b1715",
+                      "value": false,
+                      "onEvent": {
+                        "change": {
+                          "weight": 0,
+                          "actions": [
+                            {
+                              "componentId": "u:b7c9dbbdb046",
+                              "ignoreError": false,
+                              "actionType": "usability",
+                              "args": {
+                                "value": "${HMAC_checkbox}"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "flex",
+                    "flex": "0 0 auto",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "flex-start",
+                    "alignItems": "center"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:c5483fbaeebf"
+                },
+                {
+                  "type": "container",
+                  "body": [
+                    {
+                      "type": "input-text",
+                      "label": "",
+                      "name": "HMAC_text",
+                      "id": "u:b7c9dbbdb046",
+                      "disabled": true,
+                      "value": ""
+                    }
+                  ],
+                  "size": "xs",
+                  "style": {
+                    "position": "static",
+                    "display": "block",
+                    "flex": "1 1 auto",
+                    "flexGrow": 1,
+                    "flexBasis": "auto"
+                  },
+                  "wrapperBody": false,
+                  "isFixedHeight": false,
+                  "isFixedWidth": false,
+                  "id": "u:4050a0e803c8"
+                }
+              ],
+              "style": {
+                "position": "relative",
+                "inset": "auto",
+                "flexWrap": "nowrap",
+                "marginTop": "10%"
+              },
+              "id": "u:92d0ae84a5bf",
+              "isFixedHeight": false,
+              "isFixedWidth": false
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:456f49ce0a99"
+        }
+      ],
+      "style": {
+        "position": "relative"
+      },
+      "id": "u:26550debbd27"
+    }
+  ],
+  "id": "u:9fe7f98c434a"
+}

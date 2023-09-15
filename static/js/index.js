@@ -145,7 +145,7 @@
                 updateLocation: when_updateLocation,
                 jumpTo: when_jumpTo,
                 isCurrentUrl: isCurrentUrl,
-                theme: 'cxd'
+                theme: 'ang'
             }
         );
         history.listen(state => {

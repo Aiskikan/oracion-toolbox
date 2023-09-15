@@ -1,82 +1,86 @@
 {
-    "type": "page",
-    "title": "随机整数",
-    "body": [
-        {
-            "type": "input-number",
-            "label": "最小值",
-            "name": "min_number",
-            "keyboard": true,
-            "id": "u:c1d0656929d7",
-            "step": 1,
-            "required": true,
-            "value": 0,
-            "mode": "horizontal",
-            "kilobitSeparator": true
-        },
-        {
-            "type": "input-number",
-            "label": "最大值",
-            "name": "max_number",
-            "keyboard": true,
-            "id": "u:8f7ee2dafec1",
-            "step": 1,
-            "required": true,
-            "mode": "horizontal",
-            "value": 100,
-            "kilobitSeparator": false
-        },
-        {
-            "type": "button",
-            "label": "生成",
-            "onEvent": {
-                "click": {
-                    "weight": 0,
-                    "actions": [
-                        {
-                            "ignoreError": false,
-                            "script": "var func = 'random/number/action'; try { $['func'][func](event, context, doAction); } catch (e) { $['utils']['toast_error']('Action Error: ' + e.message, doAction) }",
-                            "actionType": "custom"
-                        }
-                    ]
-                }
-            },
-            "id": "u:e5291c526983",
-            "level": "primary",
-            "block": true,
-            "themeCss": {
-                "className": {
-                    "padding-and-margin:default": {
-                        "marginBottom": "30px"
-                    }
-                }
-            },
-            "className": "className-e5291c526983"
-        },
-        {
-            "type": "textarea",
-            "label": "生成值",
-            "name": "number_area",
-            "id": "u:54c8dbfc3db4",
-            "minRows": 3,
-            "maxRows": 50,
-            "readOnly": false,
-            "disabled": false,
-            "static": false,
-            "mode": "horizontal"
-        }
-    ],
-    "onEvent": {
-        "init": {
-            "weight": 0,
-            "actions": [
-                {
-                    "ignoreError": false,
-                    "script": "var path = 'random/number'; $['utils']['load_js']('/static/pages/' + path + '.js')",
-                    "actionType": "custom"
-                }
-            ]
-        }
+  "asideResizor":false,
+  "body":[
+    {
+      "id":"u:c1d0656929d7",
+      "keyboard":true,
+      "kilobitSeparator":true,
+      "label":"最小值",
+      "mode":"horizontal",
+      "name":"min_number",
+      "required":true,
+      "step":1,
+      "type":"input-number",
+      "value":0
     },
-    "id": "u:8cdb7accc431"
+    {
+      "id":"u:8f7ee2dafec1",
+      "keyboard":true,
+      "kilobitSeparator":false,
+      "label":"最大值",
+      "mode":"horizontal",
+      "name":"max_number",
+      "required":true,
+      "step":1,
+      "type":"input-number",
+      "value":100
+    },
+    {
+      "block":true,
+      "className":"className-e5291c526983",
+      "id":"u:e5291c526983",
+      "label":"生成",
+      "level":"primary",
+      "onEvent":{
+        "click":{
+          "actions":[
+            {
+              "actionType":"custom",
+              "ignoreError":false,
+              "script":"var func = 'random/number/random_number'; try { $['func'][func](event, context, doAction); } catch (e) { $['utils']['toast_error']('Action Error: ' + e.message, doAction) }"
+            }
+          ],
+          "weight":0
+        }
+      },
+      "themeCss":{
+        "className":{
+          "padding-and-margin:default":{
+            "marginBottom":"30px"
+          }
+        }
+      },
+      "type":"button"
+    },
+    {
+      "disabled":false,
+      "id":"u:54c8dbfc3db4",
+      "label":"生成值",
+      "maxRows":50,
+      "minRows":3,
+      "mode":"horizontal",
+      "name":"number_area",
+      "readOnly":false,
+      "static":false,
+      "type":"textarea"
+    }
+  ],
+  "id":"u:8cdb7accc431",
+  "onEvent":{
+    "init":{
+      "actions":[
+        {
+          "actionType":"custom",
+          "ignoreError":false,
+          "script":"var path = 'random/number'; $['utils']['load_js']('/static/pages/' + path + '.js')"
+        }
+      ],
+      "weight":0
+    }
+  },
+  "pullRefresh":{
+    "disabled":true
+  },
+  "title":"随机整数",
+  "type":"page"
 }

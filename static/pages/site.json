@@ -42,6 +42,11 @@
                   "label": "Base系列编码",
                   "url": "/crypto/base",
                   "schemaApi": "get:/static/pages/crypto/base.json"
+                },
+                {
+                  "label": "散列算法",
+                  "url": "/crypto/hash",
+                  "schemaApi": "get:/static/pages/crypto/hash.json"
                 }
               ]
             }
