@@ -1,5 +1,5 @@
 {
     "type": "page",
     "title": "主页",
-    "body": "<p>我永远喜欢珂朵莉！</p><img style=\"max-width:100%;overflow:hidden;\" src=\"/static/image/2.png\"/>"
+    "body": "<div class style=\"text-align:center; font-size:2.5em; font-weight:700\">\n<span lang=\"ja\" style=\"font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#DA0730\">Oracion</span>\n<span lang=\"ja\" style=\"font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#609ED7\">toolbox</span>\n</div><br><br><br><div class style=\"text-align:center; font-size:2.0em; font-weight:700\">\n<p>我永远喜欢珂朵莉！</p><span lang=\"ja\" style=\"font-family:A-OTF A1 Mincho Std,Yu Mincho,SimSun,serif\">こんなにも、たくさんの幸せをあの人に分けてもらった<br />だから、きっと<br />今の、私は<br />誰が何と言おうと</span>\n</div>\n<div class style=\"text-align:center; font-size:2.5em; font-weight:700\">\n<span lang=\"ja\" style=\"font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#DA0730\">世界一、</span>\n<span lang=\"ja\" style=\"font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#609ED7\">幸せな女の子だ</span>\n</div>\n<div class style=\"text-align:right; font-size:2em; font-weight:700\">\n<span lang=\"ja\" style=\"font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#609ED7\">————クトリ</span>\n</div><img style=\"max-width:100%;overflow:hidden;\" src=\"/static/image/2.png\"/>"
 }
