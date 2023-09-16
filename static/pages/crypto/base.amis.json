@@ -1,6 +1,6 @@
 {
   "type": "page",
-  "title": "base编码",
+  "title": "Base系列编码",
   "body": [
     {
       "type": "textarea",
@@ -11,7 +11,8 @@
       "maxRows": 6000,
       "trimContents": false,
       "size": "full",
-      "placeholder": "请输入数据"
+      "placeholder": "请输入数据",
+      "value":""
     },
     {
       "type": "flex",
@@ -28,6 +29,10 @@
                 {
                   "label": "Base64",
                   "value": "Base64"
+                },
+                {
+                  "label": "Base64(noUrlEncode)",
+                  "value": "Base64(noUrlEncode)"
                 },
                 {
                   "label": "Base91",

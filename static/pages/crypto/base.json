@@ -9,7 +9,8 @@
       "placeholder":"请输入数据",
       "size":"full",
       "trimContents":false,
-      "type":"textarea"
+      "type":"textarea",
+      "value":""
     },
     {
       "className":"p-1",
@@ -27,6 +28,10 @@
                 {
                   "label":"Base64",
                   "value":"Base64"
+                },
+                {
+                  "label": "Base64(noUrlEncode)",
+                  "value": "Base64(noUrlEncode)"
                 },
                 {
                   "label":"Base91",
@@ -237,6 +242,6 @@
       "weight":0
     }
   },
-  "title":"base编码",
+  "title":"Base系列编码",
   "type":"page"
 }

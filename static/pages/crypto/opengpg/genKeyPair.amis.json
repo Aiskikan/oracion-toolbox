@@ -1,0 +1,336 @@
+{
+  "type": "page",
+  "title": "生成公私钥",
+  "body": [
+    {
+      "type": "flex",
+      "className": "p-1",
+      "items": [
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "textarea",
+              "label": "私钥",
+              "name": "private_key",
+              "id": "u:bfab4f935c3a",
+              "minRows": 15,
+              "maxRows": 15,
+              "value": "",
+              "trimContents": false
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:b5288b3c917a"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "textarea",
+              "label": "公钥",
+              "name": "public_key",
+              "id": "u:31f10e38f957",
+              "minRows": 15,
+              "maxRows": 15,
+              "value": ""
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:ae6ddd42f2e0"
+        }
+      ],
+      "style": {
+        "position": "relative"
+      },
+      "id": "u:4f7ce92ff115"
+    },
+    {
+      "type": "flex",
+      "className": "p-1",
+      "items": [
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "input-text",
+              "label": "名字",
+              "name": "name",
+              "id": "u:ac9bb719071f",
+              "value": "",
+              "mode": "horizontal"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:6c7dbd776213"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "input-email",
+              "label": "邮箱",
+              "name": "email",
+              "id": "u:5ef4550e22e5",
+              "validations": {
+              },
+              "validationErrors": {
+              },
+              "value": "",
+              "mode": "horizontal"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:1891dd999349"
+        }
+      ],
+      "style": {
+        "position": "relative"
+      },
+      "id": "u:ba277dcb0b8a"
+    },
+    {
+      "type": "flex",
+      "className": "p-1",
+      "items": [
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "select",
+              "label": "密钥类型",
+              "name": "type",
+              "options": [
+                {
+                  "label": "ECC",
+                  "value": "ecc"
+                },
+                {
+                  "label": "RSA",
+                  "value": "rsa"
+                }
+              ],
+              "id": "u:9a6de723639e",
+              "multiple": false,
+              "value": "ecc",
+              "mode": "horizontal"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 0,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:25f8ae23d018"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "select",
+              "label": "密钥曲线",
+              "name": "curve",
+              "options": [
+                {
+                  "label": "curve25519",
+                  "value": "curve25519"
+                },
+                {
+                  "label": "ed25519",
+                  "value": "ed25519"
+                },
+                {
+                  "label": "p256",
+                  "value": "p256"
+                },
+                {
+                  "label": "p384",
+                  "value": "p384"
+                },
+                {
+                  "label": "p521",
+                  "value": "p521"
+                },
+                {
+                  "label": "brainpoolP256r1",
+                  "value": "brainpoolP256r1"
+                },
+                {
+                  "label": "brainpoolP384r1",
+                  "value": "brainpoolP384r1"
+                },
+                {
+                  "label": "brainpoolP512r1",
+                  "value": "brainpoolP512r1"
+                },
+                {
+                  "label": "secp256k1",
+                  "value": "secp256k1"
+                }
+              ],
+              "id": "u:7efa3144a172",
+              "multiple": false,
+              "value": "curve25519",
+              "showInvalidMatch": false,
+              "disabled": false,
+              "hiddenOn": "${type!=\"ecc\"}",
+              "mode": "horizontal"
+            },
+            {
+              "type": "select",
+              "label": "密钥长度",
+              "name": "key_len",
+              "options": [
+                {
+                  "label": "2048",
+                  "value": 2048
+                },
+                {
+                  "label": "3072",
+                  "value": 3072
+                },
+                {
+                  "label": "4096",
+                  "value": 4096
+                }
+              ],
+              "id": "u:28bc79eb9873",
+              "multiple": false,
+              "value": 2048,
+              "hiddenOn": "${type!=\"rsa\"}",
+              "mode": "horizontal"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 0,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:82f6980a04ee"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "input-password",
+              "label": "密码",
+              "name": "passphrase",
+              "id": "u:53bde5a81d5a",
+              "value": "",
+              "mode": "horizontal",
+              "showCounter": false,
+              "validations": {
+              },
+              "validationErrors": {
+              }
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:f2cd9f1a96d2"
+        },
+        {
+          "type": "container",
+          "body": [
+            {
+              "type": "button",
+              "label": "生成",
+              "onEvent": {
+                "click": {
+                  "actions": [
+                    {
+                      "ignoreError": false,
+                      "script": "!UseFunc(\"genKey\")",
+                      "actionType": "custom"
+                    }
+                  ]
+                }
+              },
+              "id": "u:5ed716d536cb",
+              "size": "md",
+              "level": "primary"
+            }
+          ],
+          "size": "xs",
+          "style": {
+            "position": "static",
+            "display": "block",
+            "flex": "1 1 auto",
+            "flexGrow": 1,
+            "flexBasis": "auto"
+          },
+          "wrapperBody": false,
+          "isFixedHeight": false,
+          "isFixedWidth": false,
+          "id": "u:bf1c970a1470"
+        }
+      ],
+      "style": {
+        "position": "relative"
+      },
+      "id": "u:d28323eb1a85"
+    }
+  ],
+  "id": "u:17f99b9faa49"
+}

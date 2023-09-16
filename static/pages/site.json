@@ -47,6 +47,18 @@
                   "label": "散列算法",
                   "url": "/crypto/hash",
                   "schemaApi": "get:/static/pages/crypto/hash.json"
+                },
+                {
+                  "label": "OpenGPG",
+                  "url": "/crypto/opengpg",
+                  "redirect": "/crypto/opengpg",
+                  "children": [
+                    {
+                      "label": "生成密钥对",
+                      "url": "/crypto/opengpg/genKeyPair",
+                      "schemaApi": "get:/static/pages/crypto/opengpg/genKeyPair.json"
+                    }
+                  ]
                 }
               ]
             }

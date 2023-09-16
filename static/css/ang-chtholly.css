@@ -1,0 +1,29 @@
+.a-Layout{
+        /* 加载背景图 */
+        background-image: url(/static/image/2.png);
+        /*background-image: url(https://www.dmoe.cc/random.php);*/
+        /* 背景图垂直、水平均居中 */
+        background-position: right center;
+        /* 背景图不平铺 */
+        background-repeat: no-repeat;
+        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+        background-attachment: fixed;
+        /* 让背景图基于容器大小伸缩 */
+        background-size: cover;
+        /* 设置背景颜色，背景图加载过程中会显示背景色 */
+        background-color: #ffffff;
+}
+.a-AppContent{
+    background: rgba(255, 255, 255, 0.6);
+    /*-webkit-backdrop-filter: blur(4px);*/
+    backdrop-filter: blur(4px);
+    /*border-radius: 25px;*/
+    /*box-shadow:inset 0 0 6px rgba(255, 255, 255, 0.2);*/
+    /*margin: 9px;*/
+}
+.a-Page-body{
+    background: rgba(255, 255, 255, 0);
+}
+.amis-scope .a-Page{
+    background: rgba(255, 255, 255, 0);
+}

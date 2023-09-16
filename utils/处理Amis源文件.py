@@ -69,9 +69,9 @@ def run_foreach(j, p):
 
 
 p = input("请输入路由相对位置: ")
-js_full_path = os.path.abspath('..') + "/www/static/pages/" + p + ".js"
-json_full_path = os.path.abspath('..') + "/www/static/pages/" + p + ".amis.json"
-r_json_full_path = os.path.abspath('..') + "/www/static/pages/" + p + ".json"
+js_full_path = os.path.abspath('..') + "/static/pages/" + p + ".js"
+json_full_path = os.path.abspath('..') + "/static/pages/" + p + ".amis.json"
+r_json_full_path = os.path.abspath('..') + "/static/pages/" + p + ".json"
 print("输出JS文件位置: " + js_full_path)
 print("输入JSON文件位置: " + json_full_path)
 f = open(json_full_path, encoding='utf-8')
