@@ -1,4 +1,4 @@
-![Oracion toolbox](https://gitee.com/aiskikan/lizzhh-toolbox/raw/main/static/image/title.png)
+![Oracion toolbox](https://gitee.com/aiskikan/oracion-toolbox/raw/main/static/image/title.png)
 
 
 # 这是什么
@@ -28,6 +28,6 @@
         - [ ] 验签
 # 我永远喜欢珂朵莉！
 
-![我永远喜欢珂朵莉！](https://gitee.com/aiskikan/lizzhh-toolbox/raw/main/static/image/title2.png)
+![我永远喜欢珂朵莉！](https://gitee.com/aiskikan/oracion-toolbox/raw/main/static/image/title2.png)
 
-![我永远喜欢珂朵莉！](https://gitee.com/aiskikan/lizzhh-toolbox/raw/main/static/image/2.png)
+![我永远喜欢珂朵莉！](https://gitee.com/aiskikan/oracion-toolbox/raw/main/static/image/2.png)
