@@ -16,7 +16,7 @@
         - [x] SHA3
         - [x] RIPEMD160
         - [x] 以上算法的HMAC
-        - [] SM3
+        - [ ] SM3
     - [ ] OpenGPG
         - [x] 生成密钥对
         - [ ] 加密
