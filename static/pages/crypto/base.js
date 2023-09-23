@@ -9,7 +9,7 @@
         "moren_button": "u:6746119145f8"
     };
 
-    $['utils']['load_js']('/static/js/lib/base-encode.js');
+    $.utils.load_js('/static/js/lib/base-encode.js');
 
 
 
@@ -56,7 +56,7 @@
         return new TextDecoder().decode(BaseCN.decode(str))
     }
 
-    
+
 
     function encode(e, c, doAction) {
         data = e.context.data
@@ -73,7 +73,7 @@
             BaseCN._KeyDict = data.basecn_dict;
             output = BaseCN_encode(data.data_input);
         }
-        $['utils']['set_value'](mapping.data_output, output, doAction);
+        $.utils.set_value(mapping.data_output, output, doAction);
     }
 
     function decode(e, c, doAction) {
@@ -91,7 +91,7 @@
             BaseCN._KeyDict = data.basecn_dict;
             output = BaseCN_decode(data.data_input);
         }
-        $['utils']['set_value'](mapping.data_output, output, doAction);
+        $.utils.set_value(mapping.data_output, output, doAction);
     }
 
     //export
@@ -100,12 +100,4 @@
     for (var i = 0; i < export_list.length; i++) {
         $['func'][path + '/' + export_list[i].name] = export_list[i];
     }
-    let amisLib = amisRequire('amis');
-    amisLib.toast.success("Success: 加载模块 " + path + " 完成", {
-        "position": "top-right",
-        "closeButton": true,
-        "showIcon": true,
-        "timeout": 100,
-        "className": "theme-toast-action-scope"
-    })
 }())

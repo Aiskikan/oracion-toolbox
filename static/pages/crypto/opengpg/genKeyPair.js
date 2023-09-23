@@ -12,11 +12,15 @@
     };
 
 
-    $['utils']['load_js']('/static/js/lib/opengpg.js');
+    $.utils.load_js('/static/js/lib/opengpg.js');
 
     async function genKey(e, c, doAction) {
         data = e.context.data
         try {
+            if (data.passphrase == "") {
+                $.utils.toast_error("Web版强制加密！空密钥会导致解密失败！", doAction);
+                return;
+            }
             const { privateKey, publicKey } = await openpgp.generateKey({
                 type: data.type,
                 curve: data.curve,
@@ -24,11 +28,12 @@
                 passphrase: data.passphrase,
                 format: 'armored'
             });
+            console.log(data);
             console.log(privateKey, publicKey);
-            $['utils']['set_value'](mapping['private_key'], privateKey, doAction);
-            $['utils']['set_value'](mapping['public_key'], publicKey, doAction);
+            $.utils.set_value(mapping['private_key'], privateKey, doAction);
+            $.utils.set_value(mapping['public_key'], publicKey, doAction);
         } catch (e) {
-            $['utils']['toast_error'](e.message, doAction);
+            $.utils.toast_error(e.message, doAction);
         }
 
     }
@@ -40,12 +45,4 @@
     for (var i = 0; i < export_list.length; i++) {
         $['func'][path + '/' + export_list[i].name] = export_list[i];
     }
-    let amisLib = amisRequire('amis');
-    amisLib.toast.success("Success: 加载模块 " + path + " 完成", {
-        "position": "top-right",
-        "closeButton": true,
-        "showIcon": true,
-        "timeout": 100,
-        "className": "theme-toast-action-scope"
-    })
 }())

@@ -126,7 +126,7 @@
                 className: 'w-full',
                 tpl: '<div><span lang="ja" style="font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#DA0730">Oracion </span><span lang="ja" style="font-family:A-OTF A1 Mincho Std,Yu Mincho,MS Mincho,serif; color:#609ED7">toolbox</span></div>'
             },
-            footer: '<div class="p-2 text-center bg-light">powred by <a href="https://aisuda.bce.baidu.com/amis/">amis</a></div>',
+            footer: '<div class="p-2 text-center bg-light"><a href="https://gitee.com/aiskikan/oracion-toolbox">开源地址（Gitee）</a>    开源协议:MIT<br>Powered  by <a href="https://aisuda.bce.baidu.com/amis/">amis</a>.</div>',
             // asideBefore: '<div class="p-2 text-center">菜单前面区域</div>',
             // asideAfter: '<div class="p-2 text-center">菜单后面区域</div>',
             api: '/static/pages/site.json'
@@ -145,7 +145,7 @@
                 updateLocation: when_updateLocation,
                 jumpTo: when_jumpTo,
                 isCurrentUrl: isCurrentUrl,
-                theme: 'ang'
+                theme: 'antd'
             }
         );
         history.listen(state => {

@@ -16,11 +16,14 @@ var $ = (window["lizzhh"] = {});
             }
         });
     }
-    function toast_error(msg, doAction) {
-        toast("Error: " + msg, doAction, "error", 2000);
+    function toast_error(msg, doAction, timeout = 2000) {
+        toast("Error: " + msg, doAction, "error", timeout);
     }
-    function toast_success(msg, doAction) {
-        toast("Success: " + msg, doAction, "success", 1000);
+    function toast_success(msg, doAction, timeout = 1000) {
+        toast("Success: " + msg, doAction, "success", timeout);
+    }
+    function toast_warn(msg, doAction, timeout = 1000) {
+        toast("Warning: " + msg, doAction, "warning", timeout);
     }
     function load_js(url, callback) {
         if ($['_JSLOADER_LIST'] == undefined) $['_JSLOADER_LIST'] = [];
@@ -47,7 +50,7 @@ var $ = (window["lizzhh"] = {});
     //export
     $['utils'] = {}
     $['func'] = {}
-    var export_list = [toast, toast_error, toast_success, load_js, set_value];
+    var export_list = [toast, toast_error, toast_success, load_js, set_value, toast_warn];
     for (var i = 0; i < export_list.length; i++) {
         $['utils'][export_list[i].name] = export_list[i];
     }

@@ -1,0 +1,182 @@
+{
+    "type": "page",
+    "title": "加密（PGP Message）",
+    "body": [
+      {
+        "type": "flex",
+        "className": "p-1",
+        "items": [
+          {
+            "type": "container",
+            "body": [
+              {
+                "type": "textarea",
+                "label": "明文",
+                "name": "text",
+                "id": "u:f5f79fafa103",
+                "minRows": 15,
+                "maxRows": 15,
+                "value": ""
+              }
+            ],
+            "size": "xs",
+            "style": {
+              "position": "static",
+              "display": "block",
+              "flex": "1 1 auto",
+              "flexGrow": 1,
+              "flexBasis": "auto"
+            },
+            "wrapperBody": false,
+            "isFixedHeight": false,
+            "isFixedWidth": false,
+            "id": "u:7f5e816efbe9"
+          },
+          {
+            "type": "container",
+            "body": [
+              {
+                "type": "combo",
+                "label": "公钥输入",
+                "name": "public_keys",
+                "multiple": true,
+                "addable": true,
+                "removable": true,
+                "removableMode": "icon",
+                "addBtn": {
+                  "label": "新增",
+                  "icon": "fa fa-plus",
+                  "level": "primary",
+                  "size": "sm",
+                  "id": "u:0c432db105d2"
+                },
+                "items": [
+                  {
+                    "type": "textarea",
+                    "label": "",
+                    "name": "public_keys",
+                    "id": "u:396ac94f749a",
+                    "minRows": 10,
+                    "maxRows": 10,
+                    "value": "",
+                    "trimContents": false
+                  }
+                ],
+                "id": "u:20b0cf0e7541",
+                "strictMode": true,
+                "syncFields": [
+                ],
+                "minLength": 0,
+                "value": []
+              }
+            ],
+            "size": "xs",
+            "style": {
+              "position": "static",
+              "display": "block",
+              "flex": "1 1 auto",
+              "flexGrow": 1,
+              "flexBasis": "auto"
+            },
+            "wrapperBody": false,
+            "isFixedHeight": false,
+            "isFixedWidth": false,
+            "id": "u:8afacfa947d4"
+          },
+          {
+            "type": "container",
+            "body": [
+              {
+                "type": "switch",
+                "label": "启用签名",
+                "option": "",
+                "name": "sign_switch",
+                "falseValue": false,
+                "trueValue": true,
+                "id": "u:3e6ce66afd82",
+                "value": false
+              },
+              {
+                "type": "input-password",
+                "label": "私钥密码",
+                "name": "passphrase",
+                "id": "u:301d1b2e96e7",
+                "showCounter": false,
+                "validations": {
+                },
+                "validationErrors": {
+                },
+                "hiddenOn": "${!sign_switch}",
+                "value": ""
+              },
+              {
+                "type": "textarea",
+                "label": "签名私钥",
+                "name": "private_key",
+                "id": "u:cf5f4d64fc63",
+                "minRows": 10,
+                "maxRows": 10,
+                "showCounter": false,
+                "trimContents": false,
+                "hiddenOn": "${!sign_switch}",
+                "value": ""
+              },
+              {
+                "type": "button",
+                "label": "加密",
+                "onEvent": {
+                  "click": {
+                    "actions": [
+                      {
+                        "ignoreError": false,
+                        "script": "!UseFunc(\"encrypt\")",
+                        "actionType": "custom"
+                      }
+                    ]
+                  }
+                },
+                "id": "u:590602640cf7",
+                "themeCss": {
+                  "className": {
+                    "padding-and-margin:default": {
+                      "marginBottom": "10px"
+                    }
+                  }
+                },
+                "className": "className-590602640cf7",
+                "level": "primary",
+                "block": true
+              }
+            ],
+            "size": "xs",
+            "style": {
+              "position": "static",
+              "display": "block",
+              "flex": "1 1 auto",
+              "flexGrow": 1,
+              "flexBasis": "auto"
+            },
+            "wrapperBody": false,
+            "isFixedHeight": false,
+            "isFixedWidth": false,
+            "id": "u:2392a3340115"
+          }
+        ],
+        "style": {
+          "position": "relative"
+        },
+        "id": "u:b8377e4cf37a"
+      },
+      {
+        "type": "textarea",
+        "label": "密文",
+        "name": "encrypted",
+        "id": "u:d06b8dd92558",
+        "minRows": 3,
+        "maxRows": 20,
+        "value": "",
+        "trimContents": false
+      }
+    ],
+    "id": "u:2c4ed9df7b51"
+  }
