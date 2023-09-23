@@ -47,7 +47,6 @@
 
     }
 
-    //export
     path = 'crypto/hash';
     var export_list = [run_hash,];
     for (var i = 0; i < export_list.length; i++) {

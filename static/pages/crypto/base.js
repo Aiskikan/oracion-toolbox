@@ -94,7 +94,6 @@
         $.utils.set_value(mapping.data_output, output, doAction);
     }
 
-    //export
     path = 'crypto/base';
     var export_list = [encode, decode,];
     for (var i = 0; i < export_list.length; i++) {

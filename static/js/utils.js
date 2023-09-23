@@ -47,7 +47,6 @@ var $ = (window["lizzhh"] = {});
             }
         })
     }
-    //export
     $['utils'] = {}
     $['func'] = {}
     var export_list = [toast, toast_error, toast_success, load_js, set_value, toast_warn];

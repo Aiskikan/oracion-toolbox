@@ -21,7 +21,6 @@ def format_js(json_map, path):
     const mapping = {json_map};
     
     {func_format}
-    //export
     path = '{path}';
     var export_list = [{export_format}];
     for (var i = 0; i < export_list.length; i++) {{

@@ -17,7 +17,6 @@
         $["utils"]["set_value"](mapping.number_area, rand(data.min_number,data.max_number), doAction);
     }
 
-    //export
     path = 'random/number';
     var export_list = [random_number,];
     for (var i = 0; i < export_list.length; i++) {

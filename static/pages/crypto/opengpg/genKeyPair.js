@@ -39,7 +39,6 @@
     }
 
 
-    //export
     path = 'crypto/opengpg/genKeyPair';
     var export_list = [genKey,];
     for (var i = 0; i < export_list.length; i++) {

@@ -46,7 +46,6 @@
         }
     }
 
-    //export
     path = 'crypto/opengpg/decryptMessage';
     var export_list = [decrypt,];
     for (var i = 0; i < export_list.length; i++) {
